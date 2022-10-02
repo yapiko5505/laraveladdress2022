@@ -3,6 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             会社一覧
         </h2>
+        <p>編集、削除は氏名をクリックするとできます。</p>
         <x-message :message="session('message')" />
     </x-slot>
 
@@ -29,5 +30,6 @@
                 @endforeach
             </table>
          </div>
+         {{$addresses->links()}}
     </div>
 </x-app-layout>

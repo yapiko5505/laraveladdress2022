@@ -14,7 +14,7 @@ class AddressController extends Controller
      */
     public function index()
     {
-        $addresses=Address::orderBy('postal', 'asc')->get();
+        $addresses=Address::orderBy('postal', 'asc')->simplePaginate(5);
         return view('address.index', compact('addresses'));
     }
 
